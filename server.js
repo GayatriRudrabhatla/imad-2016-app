@@ -16,7 +16,7 @@ var articles = {
                     In this I am going to describe about article one..
               </p>`
     },
-    'article-two' : {title : 'Article Two by  Gayatri' ,
+    articletwo : {title : 'Article Two by  Gayatri' ,
     heading : 'Article one' ,
     content : `<p>
                     This is my second article that ever published. I am excited to see this on web!
@@ -24,7 +24,7 @@ var articles = {
                 <p>
                     In this I am going to describe about article two..
               </p>`},
-    'article-three' : {title : 'Article Three by  Gayatri' ,
+    articlethree : {title : 'Article Three by  Gayatri' ,
     heading : 'Article one' ,
     content : `<p>
                     This is my third article that ever published. I am excited to see this on web!
