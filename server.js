@@ -5,18 +5,78 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articles = { 
+    'article-one' : { 
+    title : 'Article One by  Gayatri' ,
+    heading : 'Article one' ,
+    content : `<p>
+                    This is my first articlethat  ever published. I am excited to see this on web!
+               </P>
+                <p>
+                    In this I am going to describe about article one..
+              </p>`
+    },
+    'article-two' : {title : 'Article Two by  Gayatri' ,
+    heading : 'Article one' ,
+    content : `<p>
+                    This is my second article that ever published. I am excited to see this on web!
+               </P>
+                <p>
+                    In this I am going to describe about article two..
+              </p>`},
+    'article-three' : {title : 'Article Three by  Gayatri' ,
+    heading : 'Article one' ,
+    content : `<p>
+                    This is my third article that ever published. I am excited to see this on web!
+               </P>
+                <p>
+                    In this I am going to describe about article three..
+              </p>`}
+
+};
+function  createHtmlTemplate(data)
+{
+    
+var title = data.title;
+var heading = data.heading;
+var content = data.content;
+
+var htmltemplate = `
+    <html>
+       <head>
+         <tiltle>
+              ${title}
+         </title>
+         <meta name = "viewport" content = "width=device-width" , initial-scale = 1" />
+         <link href="/ui/style.css" rel="stylesheet" />
+       </head>
+       <body>
+           <div class = "container">
+               <div>
+                   <a href = "/"> Home </a>
+               </div>
+               <hr/>
+               <h3>
+                   ${heading}
+               </h3>
+               <div>
+                    ${content}
+               </div>
+            </div>
+        </body>
+    </html>
+    `;
+    return htmltemplate;
+   }            
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/articleone', function(req,res){
-   res.send('Article one is served here'); 
+app.get('/:articleName', function(req,res){
+    var articleName = req.params.articleName;
+   res.send(createHtmlTemplate(articles[articlename])); 
 });
-app.get('/articletwo', function(req,res){
-   res.send('Article two is served here'); 
-});
-app.get('/articlethree', function(req,res){
-   res.send('Article three is served here'); 
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
