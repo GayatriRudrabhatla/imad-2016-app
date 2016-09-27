@@ -1,7 +1,10 @@
 body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    font-family: cursive;
+    background-color: lightblue;
+    margin-top: 60px;
+    padding-left: inherit;
+    padding-bottom: inherit;
+
 }
 
 .center {
@@ -19,4 +22,13 @@ body {
 .img-medium {
     height: 200px;
 }
-
+.container {
+    max-width : 800px;
+    font-style : italic;
+    font-size : 50px;
+    text-shadow: 10;
+    font-family:sans serif;
+    padding-top : 60px;
+    padding-right: 20px;
+    padding-left : 20px;
+}
