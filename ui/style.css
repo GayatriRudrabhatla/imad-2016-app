@@ -25,7 +25,7 @@ body {
 .container {
     max-width : 800px;
     font-style : italic;
-    font-size : 50px;
+
     text-shadow: 10;
     font-family:sans serif;
     padding-top : 60px;
