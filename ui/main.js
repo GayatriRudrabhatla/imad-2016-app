@@ -13,11 +13,12 @@ function  move()
 {
   while(i<=5)
   {
+    alert("Entered");      
    marginLeft = marginLeft + 5;
    pic.style.maginLeft = marginLeft+"px";
    i++;
   }
-  while(5>i>10)
+  while(5<i<10)
   {
       marginRight = marginRight + 5;
       pic.style.marginRight = marginRight+"px";
