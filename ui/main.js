@@ -7,8 +7,8 @@ element.innerHTML = 'Welcome..';
 //Moving the picture
 var pic = document.getElementById('madi');
 var marginLeft = 0;
-//var marginRight = 0;
-//var i = 0;
+var marginRight = 0;
+var i = 0;
 
 function  move()
 {
