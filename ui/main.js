@@ -12,22 +12,22 @@ var marginLeft = 0;
 
 function  move()
 {
-//    while(i<=5)
- //   {
+    while(i<=5)
+   {
         marginLeft = marginLeft + 5;
         pic.style.marginLeft = marginLeft+'px';
- //       i++;
-  //  }
-  //  while(5<i<10)
-  //  {
-    //    marginRightt = marginLeft + 5;
-      //  pic.style.marginRight = marginRightt+'px';
-    //    i++;
-    //}
-//    if(i==10)
-  //  {
-    //    i = 0;
-//    }
+       i++;
+  }
+  while(5<i<10)
+  {
+    marginRightt = marginLeft + 5;
+    pic.style.marginRight = marginRightt+'px';
+      i++;
+  }
+    if(i==10)
+    {
+        i = 0;
+    }
    
 }
 
