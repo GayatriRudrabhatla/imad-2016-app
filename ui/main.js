@@ -9,10 +9,10 @@ button.onclick = function()
     //Capture the response
     request.onreadystatechange = function()
    {
-       alert('Entered to onreadystatechange');
+      // alert('Entered to onreadystatechange');
         if(request.readyState() === XMLHttpRequest.DONE)
     {
-        alert('Request done');
+       // alert('Request done');
         if(request.status === 200)
         {
             var counter = request.responseText;
