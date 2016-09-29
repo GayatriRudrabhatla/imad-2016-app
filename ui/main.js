@@ -45,7 +45,7 @@ submit.onclick= function()
        
         if(request.status === 200)
         {
-            var name = nameInput.value;
+            
             var names = JSON.parse(request.responseText);
             
             var list = '';
@@ -60,6 +60,7 @@ submit.onclick= function()
     
         };  
     //Make Request
+    var name = nameInput.value;
     request.open('GET','http://gayatrirudrabhatla.imad.hasura-app.io/submit-name?name=' + name , true);
     request.send(null);
 };
