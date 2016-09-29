@@ -1,5 +1,5 @@
 var button = document.getElementById('counter');
-var counter = 0;
+
 
 button.onclick = function()
 {
@@ -8,8 +8,9 @@ button.onclick = function()
     var request = new XMLHttpRequest();
     
     //Capture the response
-    
-    if(request.readyState() === XMLHttpRequest.DONE)
+    request.onreadystatechange = function()
+    {
+        if(request.readyState() === XMLHttpRequest.DONE)
     {
         if(request.status === 200)
         {
@@ -19,8 +20,10 @@ button.onclick = function()
         }
     }
     
-   //Render correct value to the counter 
-   // counter = counter + 1;
-    //var span = document.getElementById('count');
-    //span.innerHTML = counter.toString();
+    //Make Request
+    };  
+    request.open('GET','http://gayatrirudrabhatla.imad.hasura-app.io/',true);
+    requset.send(null);
+    
+
 };
