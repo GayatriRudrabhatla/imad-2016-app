@@ -10,7 +10,7 @@ button.onclick = function()
     request.onreadystatechange = function()
    {
       // alert('Entered to onreadystatechange');
-        if(request.readyState() === XMLHttpRequest.DONE)
+        if(request.readyState === XMLHttpRequest.DONE)
     {
        // alert('Request done');
         if(request.status === 200)
