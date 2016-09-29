@@ -26,6 +26,40 @@ button.onclick = function()
     //Make Request
     request.open('GET','http://gayatrirudrabhatla.imad.hasura-app.io/counter', true);
     request.send(null);
-    
+};
 
+var nameInput = document.getElementById('name');
+var submit = document.getelememtById('submit-btn');
+
+submit.onclick= function()
+{
+    //IT has to request the server and send the name and has to capture the list of data
+     var request = new XMLHttpRequest();
+    
+    //Capture the response
+    request.onreadystatechange = function()
+   {
+      
+     if(request.readyState === XMLHttpRequest.DONE)
+    {
+       
+        if(request.status === 200)
+        {
+            var name = nameInput.value;
+            var names = JSON.parse(request.responseText);
+            
+            var list = '';
+            for(var i = 0; i < names.length ; i++)
+            {
+                list + = '<li>' + names[i] + '</li>';
+            }
+            var ul = document.getElementById('namelist');
+            ul.innerHTML = list;
+        }
+    }
+    
+        };  
+    //Make Request
+    request.open('GET','http://gayatrirudrabhatla.imad.hasura-app.io/submit-name?name=' + name , true);
+    request.send(null);
 };
