@@ -25,7 +25,7 @@ button.onclick = function()
         };  
     //Make Request
     request.open('GET','http://gayatrirudrabhatla.imad.hasura-app.io/counter', true);
-    requset.send(null);
+    request.send(null);
     
 
 };
