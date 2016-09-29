@@ -1,25 +1,9 @@
-console.log('Loaded!');
+var button = document.getElementById('counter');
+var counter = 0;
 
-// changing text of a main text
-var element = document.getElementById('main-text');
-element.innerHTML = 'Welcome..';
-
-//Moving the picture
-var pic = document.getElementById('madi');
-var marginLeft = 0;
-
-function  move()
+button.onclick = function()
 {
-   
-   
-        marginLeft = marginLeft + 5;
-        pic.style.marginLeft = marginLeft+'px';
-   
- 
-}
-
-pic.onclick = function()
-{
-    var interval = setInterval(move,50);
+    counter = counter +1;
+    var span = document.detElementById('count');
+    span.innerHTML = counter.toString();
 };
-
