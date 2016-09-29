@@ -10,11 +10,11 @@ var marginLeft = 0;
 
 function  move()
 {
-    while(i<=5)
-   {
+   
+   
         marginLeft = marginLeft + 5;
         pic.style.marginLeft = marginLeft+'px';
-   }
+   
  
 }
 
