@@ -29,7 +29,7 @@ button.onclick = function()
 };
 
 var nameInput = document.getElementById('name');
-var submit = document.getelememtById('submit-btn');
+var submit = document.getElementById('submit-btn');
 
 submit.onclick= function()
 {
